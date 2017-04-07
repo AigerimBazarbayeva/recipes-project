@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .recipe{
+    width: 70%;
+    margin: auto;
+  }
+  </style>
+</head>
+<body style="background-image: url('background3.jpg');">
+
+<div class="container">
+  <br>
+  <ul class="nav nav-pills nav-justified">
+    <li><a href="home.html">Home</a></li>
+    <li class="active"><a href="receipes.html">Recipes</a></li>
+    <li><a href="add.html">Add</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+<br><br>
+<div class="container">
+    {{#recipes}}
+    <div class = "recipe">
+      <h3><b>Name:</b> {{name}} </h3>
+      <h3><b>Cuisine:</b> {{cuisine}} </h3>
+      <h3><b>Description:</b></h3> <p> {{description}} </p>
+    </div>
+    <hr/>
+    {{/recipes}}
+</div>
+
+</body>
+</html>
